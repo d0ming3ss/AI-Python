@@ -51,7 +51,7 @@ Aplikacja jest napisana w Pythonie i służy do generowania kodu HTML na podstaw
     - Plik `artykul.html` będzie zawierał wygenerowany kod HTML przez AI z obrazkami oraz promptami do wygenerowania obrazków pod dany akapit tekstu.
 
 7. **Szablon.HTML**
-    - Do aplikacji dołączono także plik szablon.html, który zawiera szablon, w którym użytkownicy mogą wklejać wygenerowaną treść artykułu. Szablon ten umożliwia łatwe wstawienie artykułu do ładnie sformatowanej strony HTML.
+    - Do aplikacji dołączono także plik `szablon.html`, który zawiera szablon, w którym użytkownicy mogą wklejać wygenerowaną treść artykułu. Szablon ten umożliwia łatwe wstawienie artykułu do ładnie sformatowanej strony HTML.
 
 8. **Podgląd.HTML**
-   - Plik podglad.html to przykład strony, na której użytkownik może zobaczyć podgląd wygenerowanego artykułu w ładnej formie.
+   - Plik `podglad.html` to przykład strony, na której użytkownik może zobaczyć podgląd wygenerowanego artykułu w ładnej formie.
