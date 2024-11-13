@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Szablon Artykułu</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: #333;
+      }
+
+      p {
+        line-height: 1.6;
+        color: #555;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .image-caption {
+        text-align: center;
+        font-style: italic;
+        margin-top: 8px;
+      }
+
+      blockquote {
+        font-style: italic;
+        border-left: 4px solid #ccc;
+        padding-left: 10px;
+        margin-left: 0;
+        margin-right: 0;
+        color: #777;
+      }
+
+      ul {
+        list-style: square;
+        padding-left: 20px;
+      }
+
+      /* Animacja dla wklejonego artykułu */
+      .article {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+
+      .article.show {
+        opacity: 1;
+      }
+
+      .btn-preview {
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 20px 0;
+      }
+
+      .btn-preview:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Szablon Artykułu</h1>
+      <p>Wklej poniżej treść artykułu w formacie HTML:</p>
+      <textarea id="articleInput" rows="10" style="width: 100%"></textarea>
+      <button class="btn-preview" onclick="previewArticle()">
+        Zobacz Podgląd
+      </button>
+      <div class="article" id="articlePreview"></div>
+    </div>
+
+    <!-- Sekca <body> jest pusta, dodałem opcję wklejania wygenerowanej treści przez AI (artykul.html) za pośrednictwem szablonu jako strony. Tak zintepretowałem zadanie rekrutacyjne, mam nadzieję ze kreatywność się liczy :) -->
+
+    <script>
+      function previewArticle() {
+        var articleContent = document.getElementById("articleInput").value;
+
+        // Sprawdzenie, czy artykuł nie jest pusty
+        if (articleContent.trim() === "") {
+          alert("Proszę wkleić treść artykułu!");
+          return;
+        }
+
+        // Wstawienie treści artykułu do kontenera podglądu
+        var previewContainer = document.getElementById("articlePreview");
+        previewContainer.innerHTML = articleContent;
+
+        // Animacja pojawiania się treści
+        previewContainer.classList.remove("show");
+        setTimeout(function () {
+          previewContainer.classList.add("show");
+        }, 10); // Krótkie opóźnienie, aby animacja zadziałała
+
+        // Przewinięcie w dół do artykułu
+        window.scrollTo({
+          top: previewContainer.offsetTop,
+          behavior: "smooth",
+        });
+      }
+    </script>
+  </body>
+</html>
