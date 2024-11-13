@@ -11,6 +11,8 @@ Aplikacja jest napisana w Pythonie i służy do generowania kodu HTML na podstaw
 6. Generuje kod HTML bez CSS i JavaScript, zgodnie z wymaganiami.
 7. Zapisuje wygenerowany kod HTML do pliku `artykul.html`.
 
+**!! Ze względów bezpieczeństwa w pliku `main.py` jest "pusty" API KEY dla OpenAI. !!**
+
 ## Funkcjonalności
 
 - **Wstawianie obrazów**: Obrazki są umieszczane w odpowiednich miejscach w artykule i umieszczane pod tekstem.
@@ -28,7 +30,7 @@ Aplikacja jest napisana w Pythonie i służy do generowania kodu HTML na podstaw
 2. **Konfiguracja środowiska**:
     - Ustaw swój klucz API OpenAI w zmiennej środowiskowej `OPENAI_API_KEY`:
     ```bash
-    export OPENAI_API_KEY="twój-klucz-API"
+    export OPENAI_API_KEY="your_API_key"
     ```
 
 3. **Instalacja zależności**:
