@@ -37,21 +37,34 @@ Aplikacja jest napisana w Pythonie i służy do generowania kodu HTML na podstaw
     pip install openai
     ```
 
-4. **Uruchomienie aplikacji**:
+4. **Sprawdzenie wersji openai**:
+   - Po zainstalowaniu bilbioteki OpenAI, powinno zainstalować najnowszą werjsę - `Version: 1.54.4`
+   - Użyj komendy, by sprawdzić swoją werjse openai:
+   ```bash
+   pip show openai
+   ```
+
+5. **Brak najnowszej wersji openai**:
+   - Jeśli masz starszą werjsę biblioteki OpenAI, wykonaj tą komendę:
+   ```
+   pip install --upgrade openai
+   ```
+
+6. **Uruchomienie aplikacji**:
     - Wykonaj skrypt Python, aby wygenerować HTML:
     ```bash
     python main.py
     ```
     - Aplikacja odczyta plik `input.txt`, wygeneruje odpowiedni kod HTML i zapisze go w pliku `artykul.html`.
 
-5. **Plik wejściowy**:
+7. **Plik wejściowy**:
     - Plik `input.txt` powinien zawierać treść artykułu, który ma zostać przetworzony.
 
-6. **Wynik**:
+8. **Wynik**:
     - Plik `artykul.html` będzie zawierał wygenerowany kod HTML przez AI z obrazkami oraz promptami do wygenerowania obrazków pod dany akapit tekstu.
 
-7. **Szablon.HTML**
+9. **Szablon.HTML**:
     - Do aplikacji dołączono także plik `szablon.html`, który zawiera szablon, w którym użytkownicy mogą wklejać wygenerowaną treść artykułu. Szablon ten umożliwia łatwe wstawienie artykułu do ładnie sformatowanej strony HTML.
 
-8. **Podgląd.HTML**
+10. **Podgląd.HTML**:
    - Plik `podglad.html` to przykład strony, na której użytkownik może zobaczyć podgląd wygenerowanego artykułu w ładnej formie.
